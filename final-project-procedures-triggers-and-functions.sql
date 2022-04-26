@@ -1,6 +1,5 @@
 /* Alexander Raptis */
 /* Final Project Procedures */
-/*
 -- Retrieves and displays data
 USE MultiplayerGame;
 GO
@@ -66,9 +65,7 @@ GO
 DECLARE @TotalMoney int;
 EXEC @TotalMoney = spTotalMoney;
 SELECT @TotalMoney AS 'Total Money';
-*/
 /* Final Project User Defined Functions */
-/*
 -- Scalar function that takes an argument
 USE MultiplayerGame;
 GO
@@ -93,9 +90,9 @@ CREATE FUNCTION fnHighValueCharacters
 	RETURN (SELECT * FROM Characters WHERE CurrencyAmt >= @Money);
 GO
 SELECT * FROM dbo.fnHighValueCharacters(1000);
-*/
+
 /* Final Project Triggers */
-/*
+
 USE MultiplayerGame;
 GO
 SELECT * INTO ItemsCopy FROM Items;
@@ -128,7 +125,7 @@ INSERT INTO ItemsCopy VALUES (8, 'Common Leather', 'Material', 15, 'A sheet of c
 -- View log and new table
 SELECT * FROM ItemsLog;
 SELECT * FROM ItemsCopy;
-*/
+
 -- Delete trigger
 USE MultiplayerGame;
 GO
@@ -149,7 +146,7 @@ DELETE FROM ItemsCopy WHERE ItemId = 4;
 
 SELECT * FROM ItemsLog;
 SELECT * FROM ItemsCopy;
-/*
+
 -- Update trigger
 USE MultiplayerGame;
 GO
@@ -170,4 +167,3 @@ UPDATE ItemsCopy SET ItemValue = 20
 WHERE ItemId = 2;
 
 SELECT * FROM ItemsLog;
-*/
