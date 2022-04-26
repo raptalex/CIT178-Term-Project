@@ -1,2 +1,4 @@
 # CIT178-Term-Project
-Relational database designed for an RPG game.
+A relational database designed to be used for an RPG game.
+
+This database is designed mainly for Mircosoft's SQL Server.
